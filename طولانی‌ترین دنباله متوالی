@@ -1,0 +1,22 @@
+import copy
+
+seq = sorted([100, 4, 200, 1, 3, 2])
+
+sub_seq1 = []
+sub_seq2 = []
+
+for index, num in enumerate(seq):
+    if index < len(seq) - 1:
+        if num + 1 == seq[index + 1]:
+            sub_seq2.append(num)
+        else:
+            sub_seq2.append(num)
+
+            if len(sub_seq2) > len(sub_seq1):
+                sub_seq1 = copy.deepcopy(sub_seq2)
+
+            sub_seq2.clear()
+
+
+print(sub_seq1)
+print(len(sub_seq1))
