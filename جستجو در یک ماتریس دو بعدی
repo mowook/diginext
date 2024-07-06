@@ -1,0 +1,11 @@
+a=list(input())
+b=input()
+w=0
+for i in a:
+    for j in i:
+        if(b==j):
+            w=1
+if(w==1):
+    print("true")
+else:
+    print("false")
