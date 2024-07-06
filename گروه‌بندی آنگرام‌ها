@@ -1,0 +1,11 @@
+a= ["eat", "tea", "tan", "ate", "nat", "bat"]
+b = []
+for i in a:
+    tree = False
+    for j in b:
+        if sorted(i) == sorted(j[0]):
+            j.append(i)
+            tree = True
+    if not tree:
+        b.append([i])
+print(b)
